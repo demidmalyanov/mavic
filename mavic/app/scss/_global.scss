@@ -1,0 +1,84 @@
+html{
+    box-sizing: border-box;
+
+    
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: inherit;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    color: #ffffff;
+    min-width:320px;
+    @extend %ubuntu-light;
+    font-size: 17px;
+    line-height:26px;
+
+}
+.container{
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.page-section{
+    background-image: url(../img/secpage-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    &::before{
+        content: '';
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        background: linear-gradient(107.54deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
+        opacity: 0.15;
+    }
+    &__wrapper{
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+        padding: 74px 0 50px;
+    }
+}
+
+.title{
+    @extend %sf-regular;
+    font-size: 44px;
+    line-height: 53px;
+    padding-left: 25px;
+    margin-bottom: 55px;
+    padding-top: 150px;
+}
+
+.scroll__btn{
+    padding: 13px 0 30px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
